@@ -11,26 +11,24 @@
 <body>
   <video id="webcam" autoplay muted playsinline></video>
   <canvas id="overlay"></canvas>
-
   <div id="branding">Overlay Jewels</div>
 
-  <div id="jewelry-select">
-    <button onclick="toggleDropdown()">Choose Jewelry ▼</button>
-    <div id="dropdown" class="hidden">
-      <label><input type="checkbox" id="toggleEarrings" checked onchange="updateJewelryVisibility()"> Earrings</label>
-      <label><input type="checkbox" id="toggleNecklaces" checked onchange="updateJewelryVisibility()"> Necklaces</label>
+  <div id="menu">
+    <button onclick="toggleCategory('earring')">Earrings</button>
+    <button onclick="toggleCategory('necklace')">Necklaces</button>
+  </div>
+
+  <div id="options">
+    <div id="earring-options" class="item-options">
+      <button onclick="changeEarring('earring1.png')"><img src="earrings/earring1.png" /></button>
+      <button onclick="changeEarring('earring2.png')"><img src="earrings/earring2.png" /></button>
+      <button onclick="changeEarring('earring3.png')"><img src="earrings/earring3.png" /></button>
     </div>
-  </div>
-
-  <div id="earring-options" class="options-group">
-    <button onclick="changeEarring('earring1.png')"><img src="earrings/earring1.png" alt="Earring 1" /></button>
-    <button onclick="changeEarring('earring2.png')"><img src="earrings/earring2.png" alt="Earring 2" /></button>
-  </div>
-
-  <div id="necklace-options" class="options-group">
-    <p class="label">Select Necklace</p>
-    <button onclick="changeNecklace('necklace1.png')"><img src="necklaces/necklace1.png" alt="Necklace 1" /></button>
-    <button onclick="changeNecklace('necklace2.png')"><img src="necklaces/necklace2.png" alt="Necklace 2" /></button>
+    <div id="necklace-options" class="item-options" style="display:none;">
+      <button onclick="changeNecklace('necklace1.png')"><img src="necklaces/necklace1.png" /></button>
+      <button onclick="changeNecklace('necklace2.png')"><img src="necklaces/necklace2.png" /></button>
+      <button onclick="changeNecklace('necklace3.png')"><img src="necklaces/necklace3.png" /></button>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.min.js"></script>
