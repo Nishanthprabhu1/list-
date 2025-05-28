@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins&display=swap');
 * {
   margin: 0;
@@ -33,50 +32,45 @@ video, canvas {
   color: #ffd700;
   letter-spacing: 1px;
 }
-#menu {
+#controls {
   position: fixed;
   right: 30px;
   top: 100px;
-  z-index: 4;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#menu button {
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: #fff;
+#controls button {
+  padding: 10px 20px;
   border-radius: 10px;
+  border: none;
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 16px;
 }
-#options {
+.jewelry-options {
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  width: 90%;
-}
-.item-options {
-  display: flex;
+  display: none;
+  flex-direction: row;
   gap: 10px;
-  overflow-x: auto;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 10px 15px;
-  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px 20px;
+  border-radius: 12px;
   backdrop-filter: blur(10px);
+  z-index: 2;
 }
-.item-options button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.item-options button img {
+.jewelry-options button img {
   width: 60px;
   height: 60px;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
+}
+.jewelry-options button:hover img {
+  border: 2px solid #ffd700;
 }
